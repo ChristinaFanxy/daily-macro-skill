@@ -1,0 +1,18 @@
+{
+  "name": "daily-macro-skill",
+  "version": "0.1.0",
+  "description": "每日宏观经济数据分析 - Daily Macro Analysis",
+  "author": {
+    "name": "christinaxu"
+  },
+  "repository": "https://github.com/christinaxu/daily-macro-skill",
+  "keywords": [
+    "macro",
+    "economics",
+    "fed",
+    "treasury",
+    "forex",
+    "commodities",
+    "central-bank"
+  ]
+}
