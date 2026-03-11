@@ -25,12 +25,6 @@ A Claude Code skill for daily macroeconomic data analysis and market briefings.
 
 ## Installation
 
-### From GitHub
-
-```bash
-claude plugins install github:christinaxu/daily-macro-skill
-```
-
 ### Manual Installation
 
 1. Clone this repository:
@@ -40,7 +34,8 @@ git clone https://github.com/christinaxu/daily-macro-skill.git
 
 2. Copy to your Claude Code plugins directory:
 ```bash
-cp -r daily-macro-skill ~/.claude/plugins/
+mkdir ~/.claude/skills/
+cp -r daily-macro-skill ~/.claude/skills/
 ```
 
 ## Usage
