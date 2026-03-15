@@ -1,41 +1,48 @@
-# Daily Macro Skill | 每日宏观数据分析
+# Daily Macro Skill | 每日宏观策略分析
 
-A Claude Code skill for daily macroeconomic data analysis and market briefings.
+A Claude Code skill for daily macro strategy analysis. Not just data aggregation — it identifies core narratives, validates cross-asset logic, and generates actionable watchlists.
 
 ## Features
 
-- **6 Core Analysis Modules**:
-  - Fed Dynamics (美联储动态)
-  - Commodities (大宗商品)
-  - Treasury Rates (美债利率)
-  - FX Markets (汇率市场)
-  - Central Bank Watch (央行政策)
-  - Breaking News (突发事件)
+- **Core Narrative Identification**: Priority-based decision tree (Geopolitical → Central Bank → Data → Commodity → Technical → Routine)
+- **Cross-Asset Validation**: 8 divergence patterns with danger levels (Carry Unwind, Liquidity Crisis, Stagflation, etc.)
+- **4 Macro Regimes**: Goldilocks / Reflation / Stagflation / Recession with automatic detection
+- **Actionable Watchlists**: Specific price levels with trigger + invalidation conditions
+- **Pain Trade Analysis**: Crowded positioning and stampede direction (Full mode)
 
-- **Enhanced Analytics**:
-  - Expectation Gap Alerts (预期差预警)
-  - Cross-Asset Divergence Detection (跨资产背离观察)
-  - Trade Implication Framework (交易传导推演)
-  - Historical Playbook (历史剧本复盘)
+## Data Sources
 
-- **Flexible Data Sources**:
-  - LSEG MCP (primary)
-  - S&P Global MCP (secondary)
-  - WebSearch (fallback)
+| Data Type | Source | Status |
+|-----------|--------|--------|
+| Treasury Yields, VIX, DXY | FRED API | ✅ Real-time |
+| Commodities (Oil, Gold, Copper) | Twelve Data / Alpha Vantage | ✅ Real-time |
+| Economic Calendar (CPI, NFP, GDP) | Local JSON (BLS/Fed/BEA verified) | ✅ Verified |
+| Central Bank Calendar | Local JSON (Fed verified) | ✅ Verified |
+| Mag7 Earnings | Finnhub API | ✅ Free tier |
+| Market News | NewsAPI | ⚠️ Optional |
 
 ## Installation
 
-### Manual Installation
-
-1. Clone this repository:
 ```bash
-git clone https://github.com/christinaxu/daily-macro-skill.git
+git clone https://github.com/ChristinaFanxy/daily-macro-skill.git ~/.claude/skills/daily-macro
+cd ~/.claude/skills/daily-macro
+cp .env.example .env
+# Edit .env with your API keys
 ```
 
-2. Copy to your Claude Code plugins directory:
+### Required API Keys
+
 ```bash
-mkdir ~/.claude/skills/
-cp -r daily-macro-skill ~/.claude/skills/
+FRED_API_KEY=xxx        # https://fred.stlouisfed.org/docs/api/api_key.html
+TWELVE_DATA_API_KEY=xxx # https://twelvedata.com/
+ALPHA_VANTAGE_KEY_1=xxx # https://www.alphavantage.co/
+```
+
+### Optional API Keys
+
+```bash
+FINNHUB_API_KEY=xxx     # For Mag7 earnings calendar
+NEWSAPI_KEY=xxx         # For market news
 ```
 
 ## Usage
@@ -44,84 +51,54 @@ cp -r daily-macro-skill ~/.claude/skills/
 
 ```bash
 /daily-macro           # Brief mode (default)
-/daily-macro --brief   # Quick summary
-/daily-macro --full    # Comprehensive report
+/daily-macro --brief   # Core narrative + 3 watchpoints + 1 risk
+/daily-macro --full    # Full report with data dashboard, pain trade, historical playbook
 ```
 
 ### Natural Language Triggers
 
-The skill also activates on these phrases:
-- `每日宏观` / `daily macro`
+- `每日宏观` / `daily macro` / `macro`
 - `今日市场` / `market overview`
 - `宏观分析` / `macro briefing`
-- `市场速览` / `宏观速报`
 
 ## Output Modes
 
-### Brief Mode (`--brief`)
-Quick summary with 2-3 sentences per section. Ideal for morning check-ins.
+### Brief Mode (Default)
+- Core narrative with lifecycle label
+- 3 watchpoints with bidirectional logic
+- 1 risk alert with pricing status
 
-### Full Mode (`--full`)
-Comprehensive report including:
-- Detailed data tables
-- Expectation gap analysis
-- Cross-asset correlation checks
-- Trade implications (Tailwinds/Headwinds/Pain Trade)
-- Historical playbook for major events
+### Full Mode
+- TL;DR with confidence level
+- Key data dashboard (Rates, FX, Commodities, Risk indicators)
+- Cross-asset logic validation
+- 4-5 watchpoints with pain trade analysis
+- Trade transmission (Tailwinds/Headwinds)
+- Historical playbook reference
 
-## Sample Output
+## Scripts
 
-```markdown
-# 📊 每日宏观速览 | Daily Macro Brief
-**日期**: 2026-03-11
+| Script | Purpose |
+|--------|---------|
+| `scripts/calc_metrics.py` | Fetch market data and calculate metrics |
+| `scripts/fetch_macro_intel.py` | Fetch calendars and news |
+| `scripts/validate_report.py` | Validate report data consistency |
+| `scripts/daily_push.py` | Push report to Telegram (optional) |
 
-## 🏛️ Fed 动态
-Fed 维持利率 5.25-5.50% 不变，市场预期 6 月降息概率升至 65%...
+## Project Structure
 
-## 🛢️ 大宗商品
-WTI 原油 $78.50 (+1.2%)，受中东局势影响...
-
-## 📊 美债利率
-10Y 收益率 4.25% (-3bp)，2s10s 利差 -15bp 维持倒挂...
-
-## 💱 汇率市场
-DXY 104.50 (-0.3%)，美元走弱受降息预期压制...
-
-## 🏦 央行动态
-ECB 本周四议息，市场预期维持不变...
-
-## ⚡ 突发事件
-无重大突发
 ```
-
-## Configuration
-
-### MCP Data Sources
-
-If you have LSEG or S&P Global MCP servers configured, the skill will automatically use them. Otherwise, it falls back to WebSearch.
-
-To configure MCP servers, add them to your `~/.claude/settings.json`:
-
-```json
-{
-  "mcpServers": {
-    "lseg": {
-      "command": "...",
-      "args": ["..."]
-    },
-    "spglobal": {
-      "command": "...",
-      "args": ["..."]
-    }
-  }
-}
+daily-macro/
+├── SKILL.md              # English skill definition
+├── SKILL-CN.md           # Chinese skill definition
+├── scripts/              # Data fetching and validation
+├── references/           # Calendars and methodology docs
+│   ├── economic_calendar.json
+│   ├── central_bank_calendar.json
+│   ├── bls.ics
+│   └── phase1-6 methodology docs
+└── data/                 # Generated data files (gitignored)
 ```
-
-## Requirements
-
-- Claude Code CLI
-- Internet access (for WebSearch fallback)
-- Optional: LSEG MCP, S&P Global MCP
 
 ## License
 
@@ -133,4 +110,4 @@ christinaxu
 
 ## Contributing
 
-Issues and pull requests welcome at [GitHub](https://github.com/christinaxu/daily-macro-skill).
+Issues and PRs welcome at [GitHub](https://github.com/ChristinaFanxy/daily-macro-skill).
