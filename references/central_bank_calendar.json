@@ -1,0 +1,49 @@
+{
+  "description": "Central bank meeting calendar for 2026. Update annually.",
+  "last_updated": "2026-03-15",
+  "data_sources": {
+    "FOMC": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm (verified 2026-03-15)"
+  },
+  "fomc": {
+    "name": "Federal Reserve FOMC",
+    "current_rate": "4.50%",
+    "meetings": [
+      {"date": "2026-01-28", "type": "rate_decision"},
+      {"date": "2026-03-18", "type": "rate_decision", "has_projections": true},
+      {"date": "2026-04-29", "type": "rate_decision"},
+      {"date": "2026-06-17", "type": "rate_decision", "has_projections": true},
+      {"date": "2026-07-29", "type": "rate_decision"},
+      {"date": "2026-09-16", "type": "rate_decision", "has_projections": true},
+      {"date": "2026-10-28", "type": "rate_decision"},
+      {"date": "2026-12-09", "type": "rate_decision", "has_projections": true}
+    ]
+  },
+  "boj": {
+    "name": "Bank of Japan",
+    "current_rate": "0.50%",
+    "meetings": [
+      {"date": "2026-01-24", "type": "rate_decision"},
+      {"date": "2026-03-14", "type": "rate_decision"},
+      {"date": "2026-04-28", "type": "rate_decision", "has_outlook": true},
+      {"date": "2026-06-16", "type": "rate_decision"},
+      {"date": "2026-07-31", "type": "rate_decision", "has_outlook": true},
+      {"date": "2026-09-17", "type": "rate_decision"},
+      {"date": "2026-10-30", "type": "rate_decision", "has_outlook": true},
+      {"date": "2026-12-18", "type": "rate_decision"}
+    ]
+  },
+  "ecb": {
+    "name": "European Central Bank",
+    "current_rate": "2.75%",
+    "meetings": [
+      {"date": "2026-01-30", "type": "rate_decision"},
+      {"date": "2026-03-06", "type": "rate_decision", "has_projections": true},
+      {"date": "2026-04-17", "type": "rate_decision"},
+      {"date": "2026-06-05", "type": "rate_decision", "has_projections": true},
+      {"date": "2026-07-17", "type": "rate_decision"},
+      {"date": "2026-09-11", "type": "rate_decision", "has_projections": true},
+      {"date": "2026-10-29", "type": "rate_decision"},
+      {"date": "2026-12-11", "type": "rate_decision", "has_projections": true}
+    ]
+  }
+}

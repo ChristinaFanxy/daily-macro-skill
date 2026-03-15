@@ -1,0 +1,325 @@
+{
+  "description": "Major economic data release calendar for 2026",
+  "last_updated": "2026-03-15",
+  "data_sources": {
+    "FOMC": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm (verified)",
+    "GDP_PCE": "https://www.bea.gov/news/schedule (verified)",
+    "CPI_NFP": "https://www.bls.gov/schedule/news_release/bls.ics (verified)"
+  },
+  "notes": {
+    "FOMC": "Dates with SEP have Summary of Economic Projections",
+    "CPI": "Consumer Price Index, 8:30 AM ET",
+    "NFP": "Employment Situation (Nonfarm Payrolls), 8:30 AM ET",
+    "times": "All times are Eastern Time (ET)"
+  },
+  "scheduled_events": [
+    {
+      "date": "2026-01-09",
+      "time": "08:30",
+      "country": "US",
+      "event": "Nonfarm Payrolls (Dec 2025)",
+      "importance": "high",
+      "source": "bls.gov"
+    },
+    {
+      "date": "2026-01-13",
+      "time": "08:30",
+      "country": "US",
+      "event": "CPI (Dec 2025)",
+      "importance": "high",
+      "source": "bls.gov"
+    },
+    {
+      "date": "2026-01-28",
+      "time": "14:00",
+      "country": "US",
+      "event": "FOMC Rate Decision",
+      "importance": "high",
+      "source": "federalreserve.gov"
+    },
+    {
+      "date": "2026-02-11",
+      "time": "08:30",
+      "country": "US",
+      "event": "Nonfarm Payrolls (Jan)",
+      "importance": "high",
+      "source": "bls.gov"
+    },
+    {
+      "date": "2026-02-13",
+      "time": "08:30",
+      "country": "US",
+      "event": "CPI (Jan)",
+      "importance": "high",
+      "source": "bls.gov"
+    },
+    {
+      "date": "2026-03-06",
+      "time": "08:30",
+      "country": "US",
+      "event": "Nonfarm Payrolls (Feb)",
+      "importance": "high",
+      "source": "bls.gov"
+    },
+    {
+      "date": "2026-03-11",
+      "time": "08:30",
+      "country": "US",
+      "event": "CPI (Feb)",
+      "importance": "high",
+      "source": "bls.gov"
+    },
+    {
+      "date": "2026-03-17",
+      "time": "08:30",
+      "country": "US",
+      "event": "Retail Sales",
+      "importance": "medium",
+      "source": "estimated"
+    },
+    {
+      "date": "2026-03-18",
+      "time": "14:00",
+      "country": "US",
+      "event": "FOMC Rate Decision",
+      "importance": "high",
+      "note": "With Summary of Economic Projections (SEP)",
+      "source": "federalreserve.gov"
+    },
+    {
+      "date": "2026-03-26",
+      "time": "08:30",
+      "country": "US",
+      "event": "GDP Q4 2025 Third Estimate",
+      "importance": "medium",
+      "source": "bea.gov"
+    },
+    {
+      "date": "2026-03-27",
+      "time": "08:30",
+      "country": "US",
+      "event": "PCE Price Index (Feb)",
+      "importance": "high",
+      "source": "bea.gov"
+    },
+    {
+      "date": "2026-04-03",
+      "time": "08:30",
+      "country": "US",
+      "event": "Nonfarm Payrolls (Mar)",
+      "importance": "high",
+      "source": "bls.gov"
+    },
+    {
+      "date": "2026-04-09",
+      "time": "08:30",
+      "country": "US",
+      "event": "GDP Q4 Final + PCE (Feb)",
+      "importance": "high",
+      "source": "bea.gov"
+    },
+    {
+      "date": "2026-04-10",
+      "time": "08:30",
+      "country": "US",
+      "event": "CPI (Mar)",
+      "importance": "high",
+      "source": "bls.gov"
+    },
+    {
+      "date": "2026-04-29",
+      "time": "14:00",
+      "country": "US",
+      "event": "FOMC Rate Decision",
+      "importance": "high",
+      "source": "federalreserve.gov"
+    },
+    {
+      "date": "2026-04-30",
+      "time": "08:30",
+      "country": "US",
+      "event": "GDP Q1 Advance + PCE (Mar)",
+      "importance": "high",
+      "source": "bea.gov"
+    },
+    {
+      "date": "2026-05-08",
+      "time": "08:30",
+      "country": "US",
+      "event": "Nonfarm Payrolls (Apr)",
+      "importance": "high",
+      "source": "bls.gov"
+    },
+    {
+      "date": "2026-05-12",
+      "time": "08:30",
+      "country": "US",
+      "event": "CPI (Apr)",
+      "importance": "high",
+      "source": "bls.gov"
+    },
+    {
+      "date": "2026-05-28",
+      "time": "08:30",
+      "country": "US",
+      "event": "GDP Q1 Second + PCE (Apr)",
+      "importance": "high",
+      "source": "bea.gov"
+    },
+    {
+      "date": "2026-06-05",
+      "time": "08:30",
+      "country": "US",
+      "event": "Nonfarm Payrolls (May)",
+      "importance": "high",
+      "source": "bls.gov"
+    },
+    {
+      "date": "2026-06-10",
+      "time": "08:30",
+      "country": "US",
+      "event": "CPI (May)",
+      "importance": "high",
+      "source": "bls.gov"
+    },
+    {
+      "date": "2026-06-17",
+      "time": "14:00",
+      "country": "US",
+      "event": "FOMC Rate Decision",
+      "importance": "high",
+      "note": "With Summary of Economic Projections (SEP)",
+      "source": "federalreserve.gov"
+    },
+    {
+      "date": "2026-07-02",
+      "time": "08:30",
+      "country": "US",
+      "event": "Nonfarm Payrolls (Jun)",
+      "importance": "high",
+      "source": "bls.gov"
+    },
+    {
+      "date": "2026-07-14",
+      "time": "08:30",
+      "country": "US",
+      "event": "CPI (Jun)",
+      "importance": "high",
+      "source": "bls.gov"
+    },
+    {
+      "date": "2026-07-29",
+      "time": "14:00",
+      "country": "US",
+      "event": "FOMC Rate Decision",
+      "importance": "high",
+      "source": "federalreserve.gov"
+    },
+    {
+      "date": "2026-08-07",
+      "time": "08:30",
+      "country": "US",
+      "event": "Nonfarm Payrolls (Jul)",
+      "importance": "high",
+      "source": "bls.gov"
+    },
+    {
+      "date": "2026-08-12",
+      "time": "08:30",
+      "country": "US",
+      "event": "CPI (Jul)",
+      "importance": "high",
+      "source": "bls.gov"
+    },
+    {
+      "date": "2026-09-04",
+      "time": "08:30",
+      "country": "US",
+      "event": "Nonfarm Payrolls (Aug)",
+      "importance": "high",
+      "source": "bls.gov"
+    },
+    {
+      "date": "2026-09-11",
+      "time": "08:30",
+      "country": "US",
+      "event": "CPI (Aug)",
+      "importance": "high",
+      "source": "bls.gov"
+    },
+    {
+      "date": "2026-09-16",
+      "time": "14:00",
+      "country": "US",
+      "event": "FOMC Rate Decision",
+      "importance": "high",
+      "note": "With Summary of Economic Projections (SEP)",
+      "source": "federalreserve.gov"
+    },
+    {
+      "date": "2026-10-02",
+      "time": "08:30",
+      "country": "US",
+      "event": "Nonfarm Payrolls (Sep)",
+      "importance": "high",
+      "source": "bls.gov"
+    },
+    {
+      "date": "2026-10-14",
+      "time": "08:30",
+      "country": "US",
+      "event": "CPI (Sep)",
+      "importance": "high",
+      "source": "bls.gov"
+    },
+    {
+      "date": "2026-10-28",
+      "time": "14:00",
+      "country": "US",
+      "event": "FOMC Rate Decision",
+      "importance": "high",
+      "source": "federalreserve.gov"
+    },
+    {
+      "date": "2026-11-06",
+      "time": "08:30",
+      "country": "US",
+      "event": "Nonfarm Payrolls (Oct)",
+      "importance": "high",
+      "source": "bls.gov"
+    },
+    {
+      "date": "2026-11-10",
+      "time": "08:30",
+      "country": "US",
+      "event": "CPI (Oct)",
+      "importance": "high",
+      "source": "bls.gov"
+    },
+    {
+      "date": "2026-12-04",
+      "time": "08:30",
+      "country": "US",
+      "event": "Nonfarm Payrolls (Nov)",
+      "importance": "high",
+      "source": "bls.gov"
+    },
+    {
+      "date": "2026-12-09",
+      "time": "14:00",
+      "country": "US",
+      "event": "FOMC Rate Decision",
+      "importance": "high",
+      "note": "With Summary of Economic Projections (SEP)",
+      "source": "federalreserve.gov"
+    },
+    {
+      "date": "2026-12-10",
+      "time": "08:30",
+      "country": "US",
+      "event": "CPI (Nov)",
+      "importance": "high",
+      "source": "bls.gov"
+    }
+  ]
+}
